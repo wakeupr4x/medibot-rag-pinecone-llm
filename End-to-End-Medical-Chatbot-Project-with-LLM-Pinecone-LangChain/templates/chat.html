@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0b1220">
+    <title>Medibot AI - Professional Healthcare Assistant</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        display: ['Roboto', 'sans-serif']
+                    },
+                    colors: {
+                        medical: {
+                            50: '#f0f5f9',
+                            100: '#e1ebf2',
+                            200: '#c8dbe6',
+                            300: '#a3c2d6',
+                            400: '#75a3c1',
+                            500: '#5285aa',
+                            600: '#416a8d',
+                            700: '#355674',
+                            800: '#2e4860',
+                            900: '#293e51'
+                        },
+                        calm: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    },
+                    boxShadow: {
+                        soft: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                        glow: '0 0 15px rgba(53, 86, 116, 0.3)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body class="font-sans antialiased overflow-hidden text-slate-900 dark:text-slate-100 selection:bg-medical-200 selection:text-medical-900 bg-slate-50 dark:bg-slate-900">
+    <div id="root"></div>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
